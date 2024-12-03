@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 
-import dbConnect from "./lib/dbConnect.ts";
+// import dbConnect from "./lib/dbConnect.ts";
 import bodyParser from "body-parser";
 import "dotenv/config";
 
@@ -12,11 +12,11 @@ expressApp.use(bodyParser.json());
 expressApp.use(bodyParser.urlencoded({ extended: true }));
 
 export function launchApp() {
-  const botToken = process.env.BOT_TOKEN as string;
-  dbConnect();
+  // const botToken = process.env.BOT_TOKEN as string;
+  // dbConnect();
   expressApp.listen(process.env.APP_PORT, () => {
     console.log(
-      `Server is running on http://localhost:${process.env.APP_PORT}`
+      `🚀🚀 Server is running on http://localhost:${process.env.APP_PORT} 🚀🚀`
     );
   });
 
